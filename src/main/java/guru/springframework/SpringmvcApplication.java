@@ -9,7 +9,7 @@ public class SpringmvcApplication {
 
     public static void main(String[] args) {
        ApplicationContext ctx =  SpringApplication.run(SpringmvcApplication.class, args);
-       HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
+       HelloWorldService helloWorld = ctx.getBean(HelloWorldService.class);
        System.out.println(helloWorld.sayHello("Spring"));
     }
 }
