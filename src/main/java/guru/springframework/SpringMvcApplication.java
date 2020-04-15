@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 
 import guru.springframework.controller.GreetingController;
 import guru.springframework.service.HelloWorldService;
+import thirdparty.GreetingService;
 
 @SpringBootApplication
 public class SpringMvcApplication {
@@ -19,5 +20,8 @@ public class SpringMvcApplication {
        GreetingController greeting = ctx.getBean(GreetingController.class);
        System.out.println(greeting.sayInjectedHello("Dependency Injection"));
        System.out.println(greeting.sayThirdPartyHello());
+       
+       GreetingService greetingInSpanish = ctx.getBean("spanishGreeting", GreetingService.class);
+       System.out.println(greetingInSpanish.sayHello());
     }
 }
