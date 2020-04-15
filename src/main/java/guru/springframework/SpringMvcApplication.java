@@ -4,6 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import guru.springframework.controller.GreetingController;
+import guru.springframework.service.HelloWorldService;
+
 @SpringBootApplication
 public class SpringMvcApplication {
 
@@ -13,7 +16,7 @@ public class SpringMvcApplication {
        HelloWorldService helloWorld = ctx.getBean(HelloWorldService.class);
        System.out.println(helloWorld.sayHello("Spring"));
        
-       InjectionSample injectionSample = ctx.getBean(InjectionSample.class);
+       GreetingController injectionSample = ctx.getBean(GreetingController.class);
        System.out.println(injectionSample.sayInjectedHello("Dependency Injection"));
     }
 }
