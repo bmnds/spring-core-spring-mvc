@@ -16,7 +16,8 @@ public class SpringMvcApplication {
        HelloWorldService helloWorld = ctx.getBean(HelloWorldService.class);
        System.out.println(helloWorld.sayHello("Spring"));
        
-       GreetingController injectionSample = ctx.getBean(GreetingController.class);
-       System.out.println(injectionSample.sayInjectedHello("Dependency Injection"));
+       GreetingController greeting = ctx.getBean(GreetingController.class);
+       System.out.println(greeting.sayInjectedHello("Dependency Injection"));
+       System.out.println(greeting.sayThirdPartyHello());
     }
 }
