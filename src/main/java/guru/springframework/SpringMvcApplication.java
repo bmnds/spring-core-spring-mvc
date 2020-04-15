@@ -5,11 +5,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class SpringmvcApplication {
+public class SpringMvcApplication {
 
     public static void main(String[] args) {
-       ApplicationContext ctx =  SpringApplication.run(SpringmvcApplication.class, args);
+       ApplicationContext ctx =  SpringApplication.run(SpringMvcApplication.class, args);
+       
        HelloWorldService helloWorld = ctx.getBean(HelloWorldService.class);
        System.out.println(helloWorld.sayHello("Spring"));
+       
+       InjectionSample injectionSample = ctx.getBean(InjectionSample.class);
+       System.out.println(injectionSample.sayInjectedHello("Dependency Injection"));
     }
 }
