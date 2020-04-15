@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("!portuguese")
+@Profile("default")
 public class HelloWorld implements HelloWorldService {
 	
 	public String sayHello(String to) { 
