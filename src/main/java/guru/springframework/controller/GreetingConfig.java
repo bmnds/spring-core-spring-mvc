@@ -9,6 +9,11 @@ import thirdparty.Greeting;
 import thirdparty.GreetingService;
 import thirdparty.GreetingSpanish;
 
+/**
+ * Configuration classes should be used to tell Spring how to instantiate a bean from a third-party library.
+ * @author Bruno
+ *
+ */
 @Configuration
 public class GreetingConfig {
 	
@@ -23,5 +28,5 @@ public class GreetingConfig {
 	public GreetingService greetingServiceSpanish() {
 		return new GreetingSpanish();
 	}
-
+	
 }

@@ -20,6 +20,7 @@ public class SpringMvcApplication {
        GreetingController greeting = ctx.getBean(GreetingController.class);
        System.out.println(greeting.sayInjectedHello("Dependency Injection"));
        System.out.println(greeting.sayThirdPartyHello());
+       System.out.println(greeting.sayHelloInGerman());
        
        GreetingService greetingInSpanish = ctx.getBean("spanishGreeting", GreetingService.class);
        System.out.println(greetingInSpanish.sayHello());
